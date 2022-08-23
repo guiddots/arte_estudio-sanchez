@@ -1,8 +1,10 @@
+$color_fondo: #1d1e2e;
+
 html,
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #1d1e2e;
+	background-color: $color_fondo;
 	color: #b3a098;
 	
 }
@@ -19,7 +21,6 @@ body {
 }
 
 
-
 .menu {
 	background-image: linear-gradient(to right, #b3a098 0%, #1d1e2e 80%);
 	background-color: #b3a098;
@@ -28,11 +29,9 @@ body {
 	display:flex;
 	width: 100%;
 
-}
-
-.menu li{
-	display: inline-block;
-	
+    li{
+        display: inline-block;
+    }
 }
 
 .menu_section  {
@@ -42,47 +41,45 @@ body {
 	margin-left: 0%;
 }
 
-.menu_bar li a{
-	display: flex;
-	text-decoration: none;
-	color: #1d1e2e;
-	margin-right: 20px;
-	padding: 2px;
-	width: 100%;
+.menu_bar {
+    li a{
+        display: flex;
+        text-decoration: none;
+        color: #1d1e2e;
+        margin-right: 20px;
+        padding: 2px;
+        width: 100%;}
+
+            &:hover{
+                background-color: $color_fondo;
+                color: #b3a098;
+                width: 100%;
+            }
 }
-
-.menu_bar li a:hover{
-	background-color: #1d1e2e;
-	color: #b3a098;
-	width: 100%;
-}
-
-
 
 
 .slider{
 	width: 100%;
 	margin: auto;
 	overflow: hidden;
+
+    ul {
+        display: flex;
+        padding: 0;
+        width: 300%;
+        animation: cambio 20s infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in;
+    }
+    li {
+        width: 100%;
+        list-style: none;
+    }
+    img {
+        width: 100%;
+    }
 }
 
-.slider ul {
-	display: flex;
-	padding: 0;
-	width: 300%;
-	animation: cambio 20s infinite;
-	animation-direction: alternate;
-	animation-timing-function: ease-in;
-}
-
-.slider li {
-	width: 100%;
-	list-style: none;
-}
-
-.slider img {
-	width: 100%;
-}
 
 @keyframes cambio {
 	0% {margin-left: 0;}
@@ -96,9 +93,6 @@ body {
 }
 
 
-
-
-
 .nosotros {
 	background-color: #1d1e2e;
 	font-size: 20px;
@@ -108,33 +102,33 @@ body {
 	width: 100%;
 	column-gap: 80px;
 	margin-bottom: 10%;
+
+    img {
+        display: flex;
+        flex: 1;
+    
+    }
 }
+
 .nosotros_titulo {
 	width: 100%;
 	display: flex;
 	flex: 1;
 	flex-wrap: wrap;
+
+    h1 {
+        width: 100%;
+        display: flex;
+        flex: 1;
+        font-size: 100px;
+    }
 }
 
-.nosotros_titulo h1 {
-	width: 100%;
-	display: flex;
-	flex: 1;
-	font-size: 100px;
-}
-
-.nosotros img {
-	display: flex;
-	flex: 1;
-
-}
 .cuadro-nosotros{
 	background-color: #b3a098;
 	color: #1d1e2e;
 	padding-right: 160px;
 }
-
-
 
 
 .proyectos {
@@ -149,25 +143,24 @@ body {
 						"proyectodos proyectocuatro"
 							"proyectocinco proyectocinco";
 
-}
-
-.proyectos > div {
-	display: flex;
-	align-items: stretch;
-	background-color: #1d1e2e;
-}
-
-.proyectos a {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	transition: all 0.5s ease-in;
-}
-.proyectos a:hover {
-	opacity: 0.5;
+         > div {
+            display: flex;
+            align-items: stretch;
+             background-color: #1d1e2e;
+                   }
+            a {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: all 0.5s ease-in;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+           
 }
 
 .proyectouno {
@@ -206,24 +199,19 @@ body {
 }
 
 
-
-
-
 .premios {
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 250px;
 	justify-content: space-between;
 	width: 100%;
+
+    h1 {
+        font-size: 70px;
+        width: 100%;
+        text-align: center;
+    }
 }
-
-.premios h1 {
-	font-size: 70px;
-	width: 100%;
-	text-align: center;
-}
-
-
 
 
 .pie {
@@ -251,8 +239,8 @@ body {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	
 }
+
 
 .redes a {
 	text-decoration: none;
@@ -261,11 +249,10 @@ body {
 	vertical-align: middle;
 	margin-top: 50px;
 
-}
-.redes a:hover {
-	transform: scale(1.5);
-	transition: all 0.3s ease-in;
-	
+    :hover {
+        transform: scale(1.5);
+        transition: all 0.3s ease-in;
+    }
 }
 
 
@@ -280,5 +267,3 @@ body {
 		flex-wrap: wrap;
 	}
 }
-
-

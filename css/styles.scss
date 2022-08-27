@@ -1,3 +1,7 @@
+@mixin mixin {
+	display: flex;
+	text-decoration: none;
+}
 $color_fondo: #1d1e2e;
 
 html,
@@ -35,16 +39,14 @@ body {
 }
 
 .menu_section  {
-	display: flex;
-	text-decoration: none;
+	@include mixin;
 	width: 100%;	
 	margin-left: 0%;
 }
 
 .menu_bar {
     li a{
-        display: flex;
-        text-decoration: none;
+       @include mixin;
         color: #1d1e2e;
         margin-right: 20px;
         padding: 2px;

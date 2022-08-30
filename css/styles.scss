@@ -26,7 +26,7 @@ body {
 
 
 .menu {
-	background-image: linear-gradient(to right, #b3a098 0%, #1d1e2e 80%);
+	background-image: linear-gradient(to right, #b3a098 0%, $color_fondo 80%);
 	background-color: #b3a098;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -47,7 +47,7 @@ body {
 .menu_bar {
     li a{
        @include mixin;
-        color: #1d1e2e;
+        color: $color_fondo;
         margin-right: 20px;
         padding: 2px;
         width: 100%;}
@@ -96,7 +96,7 @@ body {
 
 
 .nosotros {
-	background-color: #1d1e2e;
+	background-color: $color_fondo;
 	font-size: 20px;
 	display: flex;
 	flex: 1;
@@ -128,7 +128,7 @@ body {
 
 .cuadro-nosotros{
 	background-color: #b3a098;
-	color: #1d1e2e;
+	color: $color_fondo;
 	padding-right: 160px;
 }
 
@@ -148,7 +148,7 @@ body {
          > div {
             display: flex;
             align-items: stretch;
-             background-color: #1d1e2e;
+             background-color: $color_fondo;
                    }
             a {
             width: 100%;
@@ -246,7 +246,7 @@ body {
 
 .redes a {
 	text-decoration: none;
-	color: #1d1e2e;
+	color: $color_fondo;
 	font-size: 80px;
 	vertical-align: middle;
 	margin-top: 50px;
